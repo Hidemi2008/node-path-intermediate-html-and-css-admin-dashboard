@@ -1,3 +1,4 @@
+
 *{
     margin: 0px;
     padding: 0px;
@@ -11,32 +12,96 @@
 .cabecalho{
     background-color:white ;
     grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.cabecalho > div > input{
+    grid-column: 1/3;
+}
+
+.cabecalho> div  > input{
+    width: 90%;
+    background-color: rgba(95, 158, 160, 0.200);
+    margin: 20px;
+    padding: 3px;
+    border: 1px solid rgba(95, 158, 160, 0.100);
+    border-radius: 10px;
+}
+
+.title-of-head{
+    grid-column: 1;
+    margin: 20px;
+}
+
+.buttons{
+    display: grid;
+    grid-column: 2;
+    margin: 10px;
+}
+
+.buttons > button{
+    height: 40px;
+    width:70px;
+    border-radius: 20px;
+    grid-row: 1;
+    gap: 20px;
+    background-color: blue;
+    color: white;
 }
 
 .dashboard{
     background-color: blue;
+    color: rgb(243, 243, 243);
     grid-column: 1/1;
     grid-row: 1/3;
+    display: grid;
+    grid-template-rows: repeat(13,1fr);
+    text-align:center ;
 }
+
+.dashboard > h1{
+    grid-row: 1;
+}
+
+.ul1{
+    grid-row:2 ;
+}
+
+.ul2{
+    grid-row: 3;
+}
+   
+
 
 .content{
     display: grid;
-    grid-template-columns:repeat(2,2fr) repeat(1,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns:repeat(4,2fr) repeat(1,4fr);
     background-color:gray ;
     grid-column: 2/3;
 }
 
-.block-content{
+#block-of-content{
     grid-column: 1/2;
+}
 
+#block-of-content-right{
+    grid-column: 3/4;
+}
+
+.block-content{
+    border: 1px solid black;
+}
+
+.block-content-right{
+    border: 1px solid black;
 }
 
 .block-right{
-    grid-column: 3/3;
-    grid-row: 1;
+    grid-column: 5/5;
 }
 
 .content-block-right{
     gap: 20px;
+    border: 1px solid black;
 }
